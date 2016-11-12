@@ -3,30 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <title></title>
+<script src="drap.js"></script>
 <style>
-#box{
-	width: 200px;
-	height: 200px;
-	background: blue;
-}	
+	#box{
+		width: 100px;
+		height: 100px;
+		background: red;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
 </style>
+<script>
+window.onload = function(){
+	drap('box');
+}
+</script>
 </head>
 <body>
-<div id="box">
-    <ul>
-        <li>
-            <p>fdfsdfdsf</p>
-            <span>323232131</span>
-        </li>
-        <li>
-            <p>fdfsdfdsf</p>
-            <span>323232131</span>
-        </li>
-        <li>
-            <p>fdfsdfdsf</p>
-            <span>323232131</span>
-        </li>
-    </ul>
-</div>
+	<div id="box"></div>
 </body>
 </html>
