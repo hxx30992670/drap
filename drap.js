@@ -1,8 +1,11 @@
 function drap(id){
 	var obj = document.getElementById(id);
-	obj.onmousedown = function(){
-		var disX = obj.offsetLeft;
-		var disY = obj.offsetTop;
+	var disX = 0;
+	var disY = 0
+	obj.onmousedown = function(ev){
+		var ev = window.event || ev;
+		disX = ev.clientX-obj.offsetLeft;
+		disY = ev.clientY-obj.offsetTop;
 		document.onmousemove = function(ev){
 			var ev = window.event || ev;
 			obj.style.left = ev.clientX - disX + 'px';
@@ -12,6 +15,5 @@ function drap(id){
 			document.onmousemove = null;
 			document.onmouseup = null;
 		}
-		return false;
 	}
 }
